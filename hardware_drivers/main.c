@@ -1,27 +1,24 @@
 #include "global.h"
 
-void uart_init(void)
+void cpu_init(void)
 {
 }
 
-void uart_txd_isr(void)
-{
-}
-
-void uart_rxd_isr(void)
-{
-}
-
-#if (_UART_DEBUG_)
+#if (_MAIN_DEBUG_)
 void main(void)
 {
 	cpu_init();
+	gpio_init();
 	uart_init();
+	i2c_init();	
+	timer_init();
+	watch_dog_init();
+
 	ENABLE_GLOBAL_INTERRUPT();
 
 	while(1)
 	{
 	}
 }
-#endif//_UART_DEBUG_
+#endif
 
