@@ -8,6 +8,7 @@
 #include "i2c.h"
 #include "i2c_master_hw.h"
 #include "i2c_master_sw.h"
+#include "i2c_slave.h"
 #include "infrared.h"
 #include "e2prom.h"
 #include "ds18b20.h"
